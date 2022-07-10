@@ -2,18 +2,14 @@ var express = require("express")
 var app = express()
 require("dotenv").config() 
 var port = process.env.PORT
-const { handleGetAppointment } = require("./appointmentHandler")
+const { handleGetAppointment, handleFixAppointment, handleCancelAppointment } = require("./appointmentHandler")
 
 app.use(express.json())
 app.get("/appointment/get", handleGetAppointment)
 
-app.post("/appointment/fix", function(req, res) {
-    res.send("hello world!")
-})
+app.post("/appointment/fix", handleFixAppointment)
 
-app.post("/appointment/cancel", function(req, res) {
-    res.send("hello world!")
-})
+app.post("/appointment/cancel", handleCancelAppointment)
 
 app.post("/create", function(req, req) {
     res.send("hello wordld!")
