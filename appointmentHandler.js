@@ -9,7 +9,6 @@ async function handleGetAppointment(req, res) {
     const client = await pool.connect()
     try {
         data = await client.query(query_string)
-        client.release()
         res.status(200).json({
             appointments: data.rows
         })
@@ -59,7 +58,7 @@ async function handleCreateAppointments(req, res) {
     const { appointments } = body
     const appointment_values = appointments.map(x => Object.values(x))
     const query_string = createAppointments(appointment_values)
-    
+
     const client = await pool.connect()
     try {
         await client.query(query_string)
