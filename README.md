@@ -25,7 +25,7 @@ In the project directory, you can run:
 Runs the app in the development mode.
 
 
-###Case Study
+### Case Study
 
 Following points explain the appointment system in a hospital.
 
@@ -41,6 +41,8 @@ Doctor's consultation time will be between 8am - 4pm
 Q1
 
 Identify the entities & relations. Load the given CSV data into the objects
+entity: patient, doctor 
+relations: appointment
 
 Q2
 
@@ -56,5 +58,5 @@ Cancel appointment by patient, doctor and date & time
 
 Note:
 
-State any assumptions made.
+Assume that the data in the CSV is correct and corresponding entity is inside the database
 
