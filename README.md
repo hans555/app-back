@@ -5,8 +5,11 @@
 Create a `.env` file and fill up the following values
 
 `PORT=8080`
+
 `DB_HOST=`
+
 `DB_DATABASE=`
+
 `DB_USER=`
 
 ### Update database
