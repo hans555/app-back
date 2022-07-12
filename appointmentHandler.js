@@ -24,6 +24,7 @@ async function handleFixAppointment(req, res) {
     const body = jsonic(req.body)
     const {appointment_id, appointment_date, appointment_time, doctor_id, patient_id} = body
     const query_string = fixAppointment(appointment_id, appointment_date, appointment_time, doctor_id, patient_id)
+    
     const client = await pool.connect()
     try {
         await client.query(query_string)
